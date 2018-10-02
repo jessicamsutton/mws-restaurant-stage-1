@@ -65,7 +65,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  image.alt = restaurant.alt;
+  image.alt = restaurant.name;
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
@@ -119,25 +119,24 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
 // Create review HTML and add it to the webpage.
 createReviewHTML = (review) => {
   const li = document.createElement('li');
-  li.setAttribute("id", "review-container-individual");
 
-  const name = document.createElement('p');
-  name.setAttribute("id", "reviews-name");
+  const name = document.createElement('h5');
+  name.setAttribute("class", "reviews-name");
   name.innerHTML = review.name;
   li.appendChild(name);
 
-  const date = document.createElement('p');
-  date.setAttribute("id", "reviews-date");
+  const date = document.createElement('h5');
+  date.setAttribute("class", "reviews-date");
   date.innerHTML = review.date;
   li.appendChild(date);
 
   const rating = document.createElement('p');
-  rating.setAttribute("id", "reviews-rating");
+  rating.setAttribute("class", "reviews-rating");
   rating.innerHTML = `Rating: ${review.rating}`;
   li.appendChild(rating);
 
   const comments = document.createElement('p');
-  comments.setAttribute("id", "reviews-review");
+  comments.setAttribute("class", "reviews-review");
   comments.innerHTML = review.comments;
   li.appendChild(comments);
 
