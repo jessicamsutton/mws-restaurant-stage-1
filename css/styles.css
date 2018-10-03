@@ -56,8 +56,8 @@ nav {
 	height: 80px;
 	background-color: #252831;
 	text-align: center;
-	display: flex;
-	align-items: center;
+	vertical-align: middle;
+	line-height: 80px;
 }
 nav h1 {
 	margin: auto;
@@ -197,9 +197,8 @@ nav h1 a {
 }
 .inside #footer {
 	bottom: 0;
-	margin: 0;
 	width: 100%;
-	position: fixed;
+	position: relative;
 }
 .inside #restaurant-name {
 	color: #a4255a;
@@ -319,23 +318,20 @@ nav h1 a {
 }
 /* ====================== Responsive Design ====================== */
 @media screen and (max-width: 499px) {
-	nav h1 a {
-		font-size: 11pt;
-		font-weight: 110;
-		letter-spacing: 7px;
-	}
 	header {
 		position: sticky;
 		top: 0;
 		width: 100%;
-		overflow: hidden;
+	}
+	nav h1 a {
+		font-size: 11pt;
+		font-weight: 110;
+		letter-spacing: 6px;
 	}
 	.inside #breadcrumb {
 		width: calc(100% - 25px);
 		font-size: 15px;
 		position: sticky;
-		top: 1;
-		overflow: hidden;
 	}
 	.inside #map-container {
 		width: 100%;
